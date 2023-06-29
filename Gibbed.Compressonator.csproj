@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Company>Gibbed</Company>
+    <Authors>Gibbed</Authors>
+    <Description>https://gib.me/</Description>
+    <Copyright>Copyright © Gibbed 2023</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedCompressonator_TargetFrameworksToBuild)' == '' ">
+    <GibbedCompressonator_TargetFrameworksToBuild>$(TargetFrameworksToBuild)</GibbedCompressonator_TargetFrameworksToBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedCompressonator_TargetFrameworksToBuild)' == '' ">
+    <TargetFrameworks>netstandard2.0;net40;net45;net472;net48;net5.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedCompressonator_TargetFrameworksToBuild)' != '' ">
+    <TargetFrameworks>$(GibbedCompressonator_TargetFrameworksToBuild)</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="ThirdParty\Compressonator32.dll" Link="Compressonator32.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="ThirdParty\Compressonator64.dll" Link="Compressonator64.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".git*" />
+  </ItemGroup>
+</Project>

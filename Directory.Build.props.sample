@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <GibbedCompressonator_TargetFrameworksToBuild>net5.0</GibbedCompressonator_TargetFrameworksToBuild>
+  </PropertyGroup>
+</Project>
